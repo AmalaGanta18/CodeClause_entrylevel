@@ -1,0 +1,27 @@
+def chatbot():
+    print("Hello! I'm your chatbot. Type 'exit' to end the conversation.")
+
+    while True:
+        user_input = input("You: ")
+
+        if user_input.lower() == 'exit':
+            print("Goodbye! Have a great day.")
+            break
+        else:
+            response = generate_response(user_input)
+            print("Bot:", response)
+
+def generate_response(user_input):
+    if "hello" in user_input.lower():
+        return "Hi there! How can I assist you today?"
+    elif "how are you" in user_input.lower():
+        return "I'm just a program, but I'm here to help. What can I do for you?"
+    elif "your name" in user_input.lower():
+        return "I'm a chatbot. You can call me Chatbot. What's on your mind?"
+    elif "weather" in user_input.lower():
+        return "I'm sorry, I don't have real-time information. You can check a weather website for that."
+    elif "joke" in user_input.lower():
+        return "Why don't scientists trust atoms? Because they make up everything!"
+    else:
+        return "I'm not sure how to respond to that. Feel free to ask something else."
+chatbot()
